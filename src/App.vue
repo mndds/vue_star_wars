@@ -22,7 +22,7 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    
   }),
 };
 </script>
@@ -34,5 +34,6 @@ export default {
   background-size: cover;
 }
 /* $body-font-family = 'Barlow Condensed', sans-serif;
+Добавить 
 @import url('<link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />'); */
 </style>
