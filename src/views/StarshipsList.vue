@@ -4,6 +4,16 @@
     <div v-if="loading"></div>
 
     <div v-else-if="info && starships">
+
+      <div class="mb-5 " style="display: flex; align-items: center; gap:10px">
+            <div>                
+                <v-text-field color="orange" v-model="filter.name"  label="Name"/>
+            </div>        
+      
+            <v-btn color="grey lighten-1" @click="loadFilteredStarships" >Search</v-btn>           
+
+      </div>
+
       <v-card class="transparent">
         <v-list>
           <v-list-item
@@ -21,7 +31,7 @@
         </v-list>
       </v-card>
 
-      <v-pagination
+      <v-pagination v-if="!filter.name"
         class="mt-5"
         :total-visible="10"
         v-model="page"
@@ -55,6 +65,9 @@ export default {
     pagesLength: null,
     starships: null,
     page: 1,
+    filter: {
+            name: null,        
+        },
   }),
   mounted() {
     this.loadStarships();
@@ -79,6 +92,18 @@ export default {
           this.loading = false;
         });
     },
+    loadFilteredStarships() {
+      this.loading = true;
+      http.get(`starships/?search=${this.filter.name}&format=json`)
+        .then(response => {
+            const data = response.data;
+            this.info = data;
+            this.starships = data.results;
+        })
+         .finally(() => {
+            this.loading = false;
+          });
+    }
   },
 };
 </script>
