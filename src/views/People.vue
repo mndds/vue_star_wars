@@ -1,6 +1,6 @@
 <template>
   <v-container >
-    <h1 class="display-2 mt-5 mb-10">Characters List</h1>
+    <h1 class="mt-5 mb-10 orange--text" style="font-size: 3.75rem;">Characters List</h1>
     <div v-if="loading"></div>
 
     <div v-else-if="info && characters">
@@ -85,9 +85,5 @@ export default {
 </script>
 
 <style>
-.transparent {
-   background-color: white!important;
-   opacity: 0.8;
-   border-color: transparent!important;
- }
+
 </style>

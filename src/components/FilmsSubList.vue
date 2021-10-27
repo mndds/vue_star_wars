@@ -3,7 +3,7 @@
     <div v-if="loading"></div>
 
     <div v-else-if="films != null && films.length > 0">
-      <v-card>
+      <v-card class="transparent">
         <v-list>
           <v-list-item
             :to="{

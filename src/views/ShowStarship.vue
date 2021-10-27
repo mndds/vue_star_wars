@@ -3,8 +3,8 @@
     <div v-if="loading"></div>
 
     <div v-else-if="starShip">
-      <h1 class="display-2 mt-5 mb-10">{{ starShip.name }}</h1>
-      <v-card>
+      <h1 class=" orange--text mt-5 mb-10" style="font-size: 3em;">{{ starShip.name }}</h1>
+      <v-card class="transparent">
         <v-list>
           <v-list-item>
             <v-list-item-content>
@@ -92,12 +92,12 @@
         </v-list>
       </v-card>
       <div v-if="starShip.pilots.length > 0">
-        <v-list-item-title>Starship pilots</v-list-item-title>
+        <v-list-item-title class="orange--text" style="font-size: 2.5em;">Starship pilots</v-list-item-title>
         <people-sub-list :urls="starShip.pilots" />
       </div>
 
       <div v-if="starShip.films.length > 0">
-        <v-list-item-title>Been in films</v-list-item-title>
+        <v-list-item-title class="orange--text" style="font-size: 2.5em;"> Been in films</v-list-item-title>
         <films-sub-list :filmsUrl="starShip.films"/>
       </div>
     </div>

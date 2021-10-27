@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <h1 class="display-2 mt-5 mb-10">Starships</h1>
+    <h1 class="orange--text mt-5 mb-10 " style="font-size: 4em;">Starships</h1>
     <div v-if="loading"></div>
 
     <div v-else-if="info && starships">
-      <v-card>
+      <v-card class="transparent">
         <v-list>
           <v-list-item
             :to="{

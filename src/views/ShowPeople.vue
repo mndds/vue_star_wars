@@ -3,8 +3,8 @@
       <div v-if="loading"></div>
 
       <div v-else-if="character">
-          <h1 class="display-2 mt-5 mb-10">{{ character.name }}</h1>
-          <v-card>
+          <h1 class="mt-5 mb-10 orange--text" style="font-size: 3em;">{{ character.name }}</h1>
+          <v-card class="transparent">
                <v-list>
                    <v-list-item >
                        <v-list-item-content>

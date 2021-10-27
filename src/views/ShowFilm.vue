@@ -2,9 +2,9 @@
   <v-container>
       <div v-if="loading"></div>
       <div v-else-if="film">
-        <h1 class="display-2 mt-5 mb-10">{{film.title}}</h1>
+        <h1 class="orange--text mt-5 mb-10" style="font-size: 3em;">{{film.title}}</h1>
 
-        <v-card  class="mb-5">
+        <v-card   class="mb-5 transparent">
         <v-list>
           <v-list-item>
             <v-list-item-content>
@@ -44,7 +44,7 @@
       </v-card>
 
 
-      <v-list-item-subtitle>Characters</v-list-item-subtitle>
+      <v-list-item-subtitle class="orange--text" style="font-size: 2em;">Characters</v-list-item-subtitle>
       <people-sub-list :urls="film.characters"/>
 
 
